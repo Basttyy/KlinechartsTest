@@ -3,7 +3,7 @@ import { onMounted, onUnmounted } from 'vue'
 import { init, dispose, registerOverlay } from '@basttyy/klinecharts'
 import Topbar from './components/Topbar.vue'
 import { computeInitialChartData, loadMoreData } from './dataprocessor'
-import { bottombar, chart, chartContainer, chartHeight, chartTimestamp, replayOverlay, period, showExitConfirmation, topbar, windowWidth, bottombarHeight } from './constants'
+import { bottombar, chart, chartContainer, chartHeight, replayOverlay, period, showExitConfirmation, topbar, windowWidth, bottombarHeight } from './constants'
 import Bottombar from './components/Bottombar.vue'
 import { watchDebounced } from '@vueuse/core'
 import { cancelExit, exit, updateSize } from './helpers'
@@ -35,7 +35,7 @@ watchDebounced(period, async () => {
   chart.value.applyNewData(initialData, true);
 })
 
-watchDebounced(replayOverlay, async (newValue, oldValue) => {
+watchDebounced(replayOverlay, async (newValue) => {
   if (newValue && chart.value) {
       bottombar.value = bottombarHeight
       updateSize()
@@ -48,7 +48,7 @@ watchDebounced(replayOverlay, async (newValue, oldValue) => {
 
 watchDebounced(
   bottombar,
-  (newValue) => {
+  () => {
     updateSize()
   },
   { debounce: 300 } // Delay in milliseconds

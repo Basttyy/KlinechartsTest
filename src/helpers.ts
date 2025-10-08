@@ -126,7 +126,7 @@ export const cancelExit = () => {
 
 export function updateSize() {
     console.info('update size called')
-    const oldHeight = windowHeight.value
+    // const oldHeight = windowHeight.value
     windowHeight.value = window.innerHeight
     windowWidth.value = window.innerWidth
     // topbar.value = (windowHeight.value / oldHeight) * topbar.value
