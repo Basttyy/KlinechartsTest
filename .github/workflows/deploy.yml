@@ -18,10 +18,9 @@ jobs:
           node-version: '20'
 
       - name: Create .env file
-        uses: ozaytsev86/create-env-file@v1
-        with:
-          ENV_VITE_APP_DATA_URL: ${{ vars.APP_DATA_URL }}
-          ENV_VITE_DOMAIN_PATH: ${{ vars.DOMAIN_PATH }}
+        run: |
+          echo "VITE_APP_DATA_URL=${{ vars.APP_DATA_URL }}" >> .env
+          echo "VITE_DOMAIN_PATH=${{ vars.DOMAIN_PATH }}" >> .env
 
       - name: Install dependencies
         run: npm install
