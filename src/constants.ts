@@ -16,7 +16,6 @@ export const options: RequestInit = {
 
 export const base_url = `${import.meta.env.VITE_HEADER_API_KEY as string}/dukascopy-data/v1/candles`
 
-
 export const chartContainer = ref() as Ref<HTMLDivElement>
 export const bottombarHeight = 70
 

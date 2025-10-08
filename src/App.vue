@@ -53,6 +53,7 @@ watchDebounced(
   },
   { debounce: 300 } // Delay in milliseconds
 );
+
 </script>
 
 <template>
