@@ -10,6 +10,6 @@ export default defineConfig(({ mode }) => {
       vue(),
       tailwindcss()
     ],
-    base: env.VITE_DOMAIN_PATH,
+    base: mode == 'production' ? env.VITE_DOMAIN_PATH : '/',
   }
 })
