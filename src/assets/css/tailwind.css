@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+/* .form_el{
+	@apply border px-3 py-3 placeholder-slate-300 text-slate-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150
+}
+.form_el_label{
+	@apply block uppercase text-slate-600 text-xs font-bold
+}
+.drop_down_button{
+	@apply text-left p-2 hover:bg-slate-300 hover:font-medium
+}
+
+.drop_down{
+	@apply bg-white z-20 border dropShadow rounded-lg flex flex-col w-fit min-w-[120px] overflow-hidden
+}
+.btn{
+	@apply bg-slate-800 text-white p-2 rounded
+} */

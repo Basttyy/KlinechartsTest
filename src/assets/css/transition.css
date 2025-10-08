@@ -1,0 +1,57 @@
+
+.overlay-enter-from, .overlay-leave-to{
+	opacity: 0;
+}
+
+.overlay-enter-active, .overlay-leave-active{
+	transition: all 1s ease;
+}
+
+.normal-enter-from, .normal-leave-to{
+	opacity: 0;
+	transform: translateY(100px);
+}
+
+.normal-enter-active, .normal-leave-active{
+	transition: all .7s ease;
+}
+
+
+.left-enter-from, .left-leave-to{
+	opacity: 0;
+	transform: translateX(-100%);
+}
+
+.left-enter-active, .left-leave-active{
+	transition: all .7s ease;
+}
+
+.right-enter-from, .right-leave-to{
+	opacity: 0;
+	transform: translateX(100%);
+}
+
+.right-enter-active, .right-leave-active{
+	transition: all .7s ease;
+}
+
+
+
+/* for chart floating button */
+.chart_action-enter-from, .chart_action-leave-to{
+	opacity: 0;
+	transform: translateY(40px);
+}
+
+.chart_action-enter-active, .chart_action-leave-active{
+	transition: all .7s ease;
+}
+
+/* .drop_down-enter-from, .drop_down-leave-to{
+	opacity: 0;
+	transform: translateY(-20px);
+}
+
+.drop_down-enter-active, .drop_down-leave-active{
+	transition: all .5s ease;
+} */
