@@ -8,5 +8,5 @@ export default defineConfig({
     vue(),
     tailwindcss()
   ],
-  base: process.env.NODE_ENV === 'development' ? '/' : '/KlinechartsTest/',
+  base: process.env.VITE_DOMAIN_PATH as string,
 })

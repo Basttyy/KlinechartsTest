@@ -17,6 +17,12 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Create .env file
+        uses: ozaytsev86/create-env-file@v1
+        with:
+          ENV_VITE_APP_DATA_URL: ${{ env.API_URI }}
+          ENV_VITE_DOMAIN_PATH: ${{ env.DOMAIN_PATH }}
+
       - name: Install dependencies
         run: npm install
 
